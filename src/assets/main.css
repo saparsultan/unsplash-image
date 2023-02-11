@@ -1,0 +1,91 @@
+@import './base.css';
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
+  font-weight: normal;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1544px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.loader {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*   position: relative; */
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.loader::before {
+  background: hsla(0, 0%, 100%, 0.7);
+}
+
+.loader::after {
+  content: '';
+  font-size: 48px;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #ccc;
+  border-top-color: #ea4c89;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
